@@ -7,6 +7,8 @@
     }
     .logo {
         order: 2;
+        width: 90%;
+        height: auto;
     }
 }
 html, body {
