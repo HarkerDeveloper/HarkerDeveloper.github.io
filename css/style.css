@@ -1,4 +1,15 @@
-﻿body {
+﻿@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+    .content {
+        order: 1;
+    }
+    .logo {
+        order: 2;
+    }
+}
+html, body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     background: linear-gradient(to top, #1e1f22 0%, #1e1f22 40%, #182636 60%, #142c46 75%, #0f2f55 90%, #0d2a4a 100%);
@@ -13,8 +24,8 @@
     padding: 0 80px;
 }
 .logo {
-    width: 500px;
-    height: 500px;
+    width: 40%;
+    height: 40%;
     object-fit: cover;
     margin-top: 50px;
     border-radius: 10px;
