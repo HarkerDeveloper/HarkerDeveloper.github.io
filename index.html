@@ -5,35 +5,39 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="author" content="Harker"/>
 
-		<title>Cyber_Tolya | Discord</title>
-		<meta name="description" content="Cyber_Tolya — вход на Discord-сервер: новости, правила и сообщество" />
+		<title>Cyber_Tolya | Главная</title>
+		<meta name="description" content="Cyber_Tolya — вход на Discord-сервер: новости, модерация и сообщество" />
 
 		<link rel="icon" href="img/logo.jpg" />
 		<link rel="stylesheet" href="css/style.css" />
+		<script src="js/script.js" defer=""></script>
 	</head>
 
 	<body>
-		<header class="header">
-			<!-- Использовать при редизайне-->
-		</header>
-		
-		<selection class="hero">
+		<header class="hero">
 			<img src="img/logo.jpg" class="logo"></img>
-				
-				<div class="content">
-					<div class="title">
-						<h1 class="title">Cyber_Tolya</h1>
-						<p id="mini">
-							Общение, ивенты, развитие
-							сервера и команда, которая
-							строит это вместе.
-							Присоединяйся к комьюнити
-							Cyber_Tolya!
-						</p>
-						<a id="invite" href="https://discord.gg/74ayHpqBbJ" target="_blank">Вступить</a>
-					</div>
 
+			<div class="content">
+				<div class="title">
+					<h1 class="title">Cyber_Tolya</h1>
+					<p class="mini">
+						Общение, ивенты, развитие
+						сервера и команда, которая
+						строит это вместе.
+						Присоединяйся к комьюнити
+						Cyber_Tolya!
+					</p>
+					<a class="invite" href="https://discord.gg/74ayHpqBbJ" target="_blank">Вступить</a>
 				</div>
-		</selection>
+			</div>
+		</header>
+		<section class="news">
+			<h1 class="title-of-news-section">Новости</h1>
+			<div id="last-news">
+				<!--Здесь js вставляет карточки-->
+			</div>
+
+			<a class="all-news-button" href="news.html">Все ></a>
+		</section>
 	</body>
 </html>
