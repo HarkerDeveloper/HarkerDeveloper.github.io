@@ -39,6 +39,7 @@ fetch("data/news.json")
 		document.querySelector(".news-title").textContent = item.title;
 		document.querySelector(".news-date").textContent = item.date;
 		document.querySelector(".news-text").innerHTML = item.text.join("\n");
+		console.log("item.text");
 	}
 		
 });

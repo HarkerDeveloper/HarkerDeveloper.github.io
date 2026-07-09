@@ -95,6 +95,7 @@ html, body {
     color: #FFFFFF;
     text-decoration: none;
     overflow: hidden;
+    width: 240px;
 }
 .card img {
     width: 100%;
