@@ -13,9 +13,14 @@
         overflow-x: auto;
         gap: 10px;
     }
+    .last-news {
+        display: flex;
+        overflow-x: auto;
+        gap: 16px;
+    }
     .card {
-        min-width: 180px;
-        flex-shink: 0;
+        flex-shrink: 0;
+        width: 280px;
     }
 }
 
@@ -87,6 +92,8 @@ html, body {
 .card {
     background: #1c1c1c;
     border-radius: 20px;
+    color: #FFFFFF;
+    text-decoration: none;
     overflow: hidden;
 }
 .card img {
