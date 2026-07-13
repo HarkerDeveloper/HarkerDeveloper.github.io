@@ -12,7 +12,7 @@ fetch("data/news.json")
 			card.className = "card";
 			card.href = `full-news.html?id=${item.id}`;
 			card.innerHTML = `<img src="${item.img}"</img>
-							  <p>${item.title}</p>`;
+							  <h2 class="text-of-card">${item.title}</h2>`;
 			lastNews.appendChild(card);
 		});
 	}
@@ -25,7 +25,7 @@ fetch("data/news.json")
 			card.className = "card";
 			card.href = `full-news.html?id=${item.id}`
 			card.innerHTML = `<img src="${item.img}"</img>
-						      <p>${item.title}</p>`;
+						      <h2 class="text-of-card">${item.title}</h2>`;
 			allNews.appendChild(card);
 		});
 	}

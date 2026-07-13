@@ -42,7 +42,7 @@ html, body {
     padding: 0 80px;
 }
 .logo {
-    width: clamp(290px, 40vw, 800px);
+    width: clamp(290px, 402vw, 800px);
     height: auto;
     object-fit: cover;
     margin-top: 50px;
@@ -88,6 +88,7 @@ html, body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    margin-left: 200px;
 }
 .card {
     background: #1c1c1c;
@@ -95,11 +96,15 @@ html, body {
     color: #FFFFFF;
     text-decoration: none;
     overflow: hidden;
-    width: 240px;
+    width: 360px;
+    height: 400px;
 }
 .card img {
     width: 100%;
     display: block;
+}
+.text-of-card {
+    padding-left: 20px;
 }
 .all-news-button {
     display: block;
@@ -109,6 +114,7 @@ html, body {
     font-size: 20px;
     margin-top: 20px;
     margin-right: 18px;
+    font-size: 25px;
 }
 
 /* Страница всех новостей */
@@ -116,14 +122,10 @@ html, body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    margin-left: 200px;
 }
 .title-of-all-news-section {
     text-align: center;
-}
-#all-news {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
 }
 
 /* Полная статья новости */
