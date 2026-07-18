@@ -1,25 +1,4 @@
-﻿@media (max-width: 870px) {
-    .hero {
-        flex-direction: column;
-    }
-    .content {
-        order: 1;
-    }
-    .logo {
-        order: 2;
-    }
-    #last-news {
-        display: flex;
-        overflow-x: auto;
-        gap: 10px;
-    }
-    .card {
-        flex-shrink: 0;
-        width: 280px;
-    }
-}
-
-/* Основа всех страниц */
+﻿/* Основа всех страниц */
 html, body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -33,7 +12,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 100hv;
+    min-height: 90vh;
     padding: 0 80px;
 }
 .logo {
@@ -42,7 +21,6 @@ html, body {
     object-fit: cover;
     margin-top: 50px;
     border-radius: 10px;
-    margin-left: 36px;
 }
 .content {
     display: flex;
@@ -81,8 +59,9 @@ html, body {
 }
 #last-news {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: clamp(20px, 4vw, 80px);
 }
 .card {
     background: #1c1c1c;
@@ -90,6 +69,7 @@ html, body {
     color: #FFFFFF;
     text-decoration: none;
     overflow: hidden;
+    flex-shrink: 0;
     width: clamp(280px, 25vw, 360px);
     height: clamp(320px, 28vw, 400px);
 }
@@ -98,25 +78,23 @@ html, body {
     display: block;
 }
 .text-of-card {
-    padding-left: 20px;
+    padding-left: 10px;
 }
 .all-news-button {
     display: block;
     text-align: right;
     text-decoration: none;
     color: #FFFFFF;
-    font-size: 20px;
     margin-top: 20px;
     margin-right: 18px;
-    font-size: 25px;
 }
 
 /* Страница всех новостей */
 #all-news {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-left: 200px;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: clamp(20px, 4vw, 80px);
 }
 .title-of-all-news-section {
     text-align: center;
@@ -130,8 +108,31 @@ html, body {
     display: block;
 }
 .novost {
-    padding-left: 20px;
+    padding-left: clamp(6px, 4vw, 20px);
 }
+
+@media (max-width: 870px) {
+    .hero {
+        flex-direction: column;
+    }
+    .content {
+        order: 1;
+    }
+    .logo {
+        order: 2;
+    }
+    #last-news {
+        display: flex;
+        justify-content: flex-start;
+        overflow-x: auto;
+    }
+    #all-news {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 
 
 
