@@ -5,40 +5,107 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="author" content="Harker"/>
 
-		<title>Cyber_Tolya | Главная</title>
-		<meta name="description" content="Cyber_Tolya — вход на Discord-сервер: новости, модерация и сообщество" />
+		<title>Voxelon | Главная</title>
+		<meta name="description" content="Voxelon — вход на Discord-сервер: новости, модерация и сообщество" />
 
-		<link rel="icon" href="img/logo.jpg" />
+		<link rel="icon" href="images/assets/logo.svg" />
 		<link rel="stylesheet" href="css/style.css" />
 		<script src="js/script.js" defer=""></script>
 	</head>
 
 	<body>
-		<header class="hero">
-			<img src="img/logo.jpg" class="logo"></img>
+		<div class="page">
 
-			<div class="content">
-				<div class="title">
-					<h1 class="title">Cyber_Tolya</h1>
-					<p class="mini">
-						Общение, ивенты, развитие
-						сервера и команда, которая
-						строит это вместе.
-						Присоединяйся к комьюнити
-						Cyber_Tolya!
-					</p>
-					<a class="invite" href="https://discord.gg/74ayHpqBbJ" target="_blank">Вступить</a>
+			<nav class="navbar">
+				<a href="index.html" class="nav-brand">
+					<img src="images/assets/logo.svg" class="nav-logo">
+					Voxelon
+				</a>
+
+				<div class="nav-links">
+					<a href="news.html">Новости</a>
+					<a href="#development">Разработка</a>
+					<a href="https://discord.gg/74ayHpqBbJ" target="_blank">Discord</a>
+					<a href="https://github.com/HarkerDeveloper" target="_blank">GitHub</a>
+
+					<div class="menu-footer">
+						<div class="footer-logo">
+							<img src="images/assets/logo.svg" class="nav-logo">
+							Voxelon
+						</div>
+						<p class="footer-copy">
+							© 2026 Voxelon
+						</p>
+					</div>
+
 				</div>
+
+				<button class="burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</nav>
+
+			<header class="hero">
+				<div class="logo">
+					<svg width="367" height="400" viewBox="0 0 367 400" fill="none" xmlns="http://www.w3.org/2000/svg" class="hexagon">
+						<path d="M183.164 0L366.329 100V300L183.164 400L0 300V100L183.164 0Z" fill="url(#paint0_linear_4_4)" />
+						<defs>
+							<linearGradient id="paint0_linear_4_4" x1="183.164" y1="0" x2="183.164" y2="400" gradientUnits="userSpaceOnUse">
+								<stop offset="0.47" stop-color="#8B5CF6" />
+								<stop offset="0.76" stop-color="#2563EB" />
+								<stop offset="0.96" stop-color="#1D4ED8" />
+							</linearGradient>
+						</defs>
+					</svg>
+					<svg width="196" height="219" viewBox="0 0 196 219" fill="none" xmlns="http://www.w3.org/2000/svg" class="letter">
+						<path d="M35.5824 -9.53674e-07L96.3068 177.699H98.7571L159.482 -9.53674e-07H195.064L116.548 218.182H78.5156L4.31389e-06 -9.53674e-07H35.5824Z" fill="white" />
+					</svg>
+				</div>
+
+				<h1 class="title">Voxelon</h1>
+			</header>
+
+			<section class="minimalistic-invite">
+				<div class="about-words">
+					<span>Community.</span>
+					<span>Development.</span>
+					<span>Gaming.</span>
+				</div>
+
+				<a class="invite" href="https://discord.gg/74ayHpqBbJ" target="_blank">Вступить</a>
+			</section>
+
+			<section class="news">
+
+				<h1 class="title-of-news-section">Новости</h1>
+				<div id="last-news">
+					<!-- Здесь js вставляет карточки -->
+				</div>
+				<a class="all-news-button" href="news.html">
+					<h2 class="all-news-button">Все ></h2>
+				</a>
+
+			</section>
+		</div>
+
+		<footer class="footer">
+
+			<div class="footer-logo">
+				<img src="images/assets/logo.svg" class="nav-logo">
+				Voxelon
 			</div>
-		</header>
-		<section class="news">
-			<h1 class="title-of-news-section">Новости</h1>
-			<div id="last-news">
-				<!--Здесь js вставляет карточки-->
+
+			<div class="footer-links">
+				<a href="https://discord.gg/74ayHpqBbJ" target="_blank">Discord</a>
+				<a href="https://github.com/HarkerDeveloper" target="_blank">GitHub</a>
 			</div>
-			<a class="all-news-button" href="news.html">
-				<h2 class="all-news-button">Все ></h2>
-			</a>
-		</section>
+
+			<p class="footer-copy">
+				© 2026 Voxelon
+			</p>
+
+		</footer>
 	</body>
 </html>
