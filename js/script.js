@@ -1,7 +1,7 @@
 // Генерация новостей 
 
 fetch("data/news.json")
-.then(res => res.json())
+.then((res) => res.json())
 .then(news => {
 
 	// Генерация последних новостей 
@@ -10,7 +10,7 @@ fetch("data/news.json")
 	if(lastNews) {
 		news
 		.slice(0, 6)
-		.forEach(item => {
+		.forEach((item) => {
 			const card = document.createElement("a");
 			card.className = "card";
 			card.href = `full-news.html?id=${item.id}`;
@@ -24,7 +24,7 @@ fetch("data/news.json")
 
 	const allNews = document.getElementById("all-news");
 	if(allNews) {
-		news.forEach(item => {
+		news.forEach((item) => {
 			const card = document.createElement("a");
 			card.className = "card";
 			card.href = `full-news.html?id=${item.id}`
@@ -40,7 +40,7 @@ fetch("data/news.json")
 	if(newsDate) {
 		const params = new URLSearchParams(window.location.search);
 		const id = params.get("id");
-		const item = news.find(n => n.id == id);
+		const item = news.find((n) => n.id == id);
 
 		document.title = `Voxelon | ${item.title}`;
 		document.querySelector(".news-image").src = item.image;
@@ -60,3 +60,12 @@ burger.addEventListener("click", () => {
 	navLinks.classList.toggle("active");
 	burger.classList.toggle("active");
 });
+
+// Временная заглушка
+
+const devButton = document.getElementById("development-button");
+
+devButton.addEventListener("click", (event) => {
+	event.preventDefault();
+	alert("Эта секция временно закрыта на ремонт");
+})
