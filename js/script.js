@@ -65,7 +65,6 @@ burger.addEventListener("click", () => {
 
 const devButton = document.getElementById("development-button");
 
-devButton.addEventListener("click", (event) => {
-	event.preventDefault();
+devButton.addEventListener("click", () => {
 	alert("Эта секция временно закрыта на ремонт");
 })
