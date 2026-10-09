@@ -7,7 +7,7 @@ fetch("data/news.json")
 	// Генерация последних новостей 
 
 	const lastNews = document.getElementById("last-news");
-	if(lastNews) {
+	if (lastNews) {
 		news
 		.slice(0, 6)
 		.forEach((item) => {
@@ -23,7 +23,7 @@ fetch("data/news.json")
 	// Все новости
 
 	const allNews = document.getElementById("all-news");
-	if(allNews) {
+	if (allNews) {
 		news.forEach((item) => {
 			const card = document.createElement("a");
 			card.className = "card";
@@ -37,7 +37,7 @@ fetch("data/news.json")
 	// Страница новости
 
 	const newsDate = document.querySelector(".news-date")
-	if(newsDate) {
+	if (newsDate) {
 		const params = new URLSearchParams(window.location.search);
 		const id = params.get("id");
 		const item = news.find((n) => n.id == id);
