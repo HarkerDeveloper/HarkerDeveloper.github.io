@@ -1,9 +1,15 @@
 ﻿/* Основа всех страниц */
 
+/* @font-face {
+    font-family: "Inter";
+    src: url("assets/fonts/Inter/Inter-VariableFont.ttf") format("truetype");
+} */
+
 html, body {
     display: flex;
     flex-direction: column;
     margin: 0;
+    /* font-family: "Inter"; */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     color: white;
     background: #111827;
