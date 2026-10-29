@@ -77,7 +77,7 @@ html, body {
 }
 .footer-links {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(2, auto);
 
     justify-content: center;
     gap: 16px 32px;
@@ -128,7 +128,7 @@ html, body {
     transform: translate(-50%,-50%);
 }
 .title {
-    font-size: clamp(100px, 12vw, 220px);
+    font-size: clamp(90px, 12vw, 220px);
     font-weight: 600;
 }
 #brand {
