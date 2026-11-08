@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "Inter";
-    src: url("../assets/fonts/Inter/inter-variable.woff2") format("woff2-variations");
+    src: url("../assets/fonts/inter/inter-variable.woff2") format("woff2-variations");
 }
 
 html, body {

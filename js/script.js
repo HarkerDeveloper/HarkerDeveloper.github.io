@@ -1,6 +1,6 @@
 // Генерация новостей
 
-function genCards(news)
+function genCards(news, container)
 {
 	news.forEach((item) => {
 		const card = document.createElement("a");
@@ -8,7 +8,7 @@ function genCards(news)
 		card.href = `full-news.html?id=${item.id}`;
 		card.innerHTML = `<img src="${item.image}">
 							  <h2 class="text-of-card">${item.title}</h2>`;
-		lastNews.appendChild(card);
+		container.appendChild(card);
 	});
 }
 
@@ -20,14 +20,14 @@ fetch("data/news.json")
 
 	const lastNews = document.getElementById("last-news");
 	if (lastNews) {
-		genCards(news.slice(0, 6));
+		genCards(news.slice(0, 6), lastNews);
 	}
 
 	// Все новости
 
 	const allNews = document.getElementById("all-news");
 	if (allNews) {
-		genCards(news);
+		genCards(news, allNews);
 	}
 
 	// Страница новости
