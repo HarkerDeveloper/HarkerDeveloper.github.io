@@ -1,4 +1,16 @@
-// Генерация новостей 
+// Генерация новостей
+
+function genCards(news)
+{
+	news.forEach((item) => {
+		const card = document.createElement("a");
+		card.className = "card";
+		card.href = `full-news.html?id=${item.id}`;
+		card.innerHTML = `<img src="${item.image}">
+							  <h2 class="text-of-card">${item.title}</h2>`;
+		lastNews.appendChild(card);
+	});
+}
 
 fetch("data/news.json")
 .then((res) => res.json())
@@ -8,30 +20,14 @@ fetch("data/news.json")
 
 	const lastNews = document.getElementById("last-news");
 	if (lastNews) {
-		news
-		.slice(0, 6)
-		.forEach((item) => {
-			const card = document.createElement("a");
-			card.className = "card";
-			card.href = `full-news.html?id=${item.id}`;
-			card.innerHTML = `<img src="${item.image}">
-							  <h2 class="text-of-card">${item.title}</h2>`;
-			lastNews.appendChild(card);
-		});
+		genCards(news.slice(0, 6));
 	}
 
 	// Все новости
 
 	const allNews = document.getElementById("all-news");
 	if (allNews) {
-		news.forEach((item) => {
-			const card = document.createElement("a");
-			card.className = "card";
-			card.href = `full-news.html?id=${item.id}`
-			card.innerHTML = `<img src="${item.image}">
-						      <h2 class="text-of-card">${item.title}</h2>`;
-			allNews.appendChild(card);
-		});
+		genCards(news);
 	}
 
 	// Страница новости

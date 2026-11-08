@@ -1,16 +1,15 @@
 ﻿/* Основа всех страниц */
 
-/* @font-face {
+@font-face {
     font-family: "Inter";
-    src: url("assets/fonts/Inter/Inter-VariableFont.ttf") format("truetype");
-} */
+    src: url("../assets/fonts/Inter/inter-variable.woff2") format("woff2-variations");
+}
 
 html, body {
     display: flex;
     flex-direction: column;
+    font-family: "Inter";
     margin: 0;
-    /* font-family: "Inter"; */
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     color: white;
     background: #111827;
     min-height: 100dvh;
@@ -75,6 +74,7 @@ html, body {
 }
 .footer-logo {
     display: flex;
+    align-items: center;
     justify-content: center;
     gap: 12px;
     font-size: 24px;
@@ -148,14 +148,14 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: clamp(150px, 10vw, 220px);
+    margin-top: clamp(200px, 15vw, 350px);
     gap: clamp(50px, 10dvh, 80px);
 }
 .slogan {
     display: flex;
     flex-direction: column;
 
-    font-size: clamp(40px, 4vw, 50px);
+    font-size: clamp(32px, 6vw, 60px);
     font-weight: bold;
 
     background: linear-gradient(to bottom, #8B5CF6 0%, #6366F1 50%, #2563EB 100%);
@@ -206,10 +206,10 @@ html, body {
     width: clamp(280px, 25vw, 360px);
     height: clamp(320px, 28vw, 400px);
 }
-.card img {
-    width: 100%;
-    display: block;
-}
+    .card img {
+        width: 100%;
+        display: block;
+    }
 .text-of-card {
     padding-left: 10px;
 }
