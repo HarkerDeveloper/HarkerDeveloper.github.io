@@ -4,12 +4,16 @@
     font-family: "Inter";
     src: url("../assets/fonts/inter/inter-variable.woff2") format("woff2-variations");
 }
-
-html, body {
+html {
+    background: #1c1c1c;
+}
+body {
     display: flex;
     flex-direction: column;
     font-family: "Inter";
     margin: 0;
+    cursor: default;
+
     color: white;
     background: #111827;
     min-height: 100dvh;
@@ -18,18 +22,6 @@ html, body {
     flex: 1;
 }
 
-.nav-brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-}
-.nav-logo {
-    width: 34px;
-    height: 34px;
-}
 .navbar {
     position: sticky;
     top: 0;
@@ -43,6 +35,22 @@ html, body {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     z-index: 1000;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+.nav-logo {
+    width: 34px;
+    height: 34px;
+}
+.burger {
+    display: none;
 }
 .nav-links {
     display: flex;
@@ -59,15 +67,12 @@ html, body {
 .nav-links a:hover {
     color: #2819fa;
 }
-.burger {
-    display: none;
-}
 .menu-footer {
     display: none;
 }
 
 .footer {
-    padding: 40px 20px;
+    padding: 40px;
     text-align: center;
     border-top: 1px solid #2b2b2b;
     background: #1c1c1c;
@@ -79,7 +84,7 @@ html, body {
     gap: 12px;
     font-size: 24px;
     font-weight: 700;
-    margin-bottom: 16px;
+    padding-bottom: 16px;
 }
 .footer-links {
     display: grid;
@@ -143,7 +148,6 @@ html, body {
     gap: clamp(20px, 3vw, 40px);
 }
 
-
 #minimalism {
     display: flex;
     align-items: center;
@@ -184,6 +188,10 @@ html, body {
     box-shadow: 0 12px 30px rgba(88, 101, 242, 0.35);
 }
 
+.news {
+    width: fit-content;
+    margin: 0 auto;
+}
 .title-of-news-section {
     text-align: center;
     margin-top: 8%;
@@ -218,8 +226,6 @@ html, body {
     text-align: right;
     text-decoration: none;
     color: white;
-    margin-top: 20px;
-    margin-right: 18px;
 }
 
 /* Страница всех новостей */
@@ -229,6 +235,7 @@ html, body {
     grid-template-columns: repeat(3, auto);
     justify-content: center;
     gap: clamp(20px, 4vw, 80px);
+    margin-bottom: 32px;
 }
 .title-of-all-news-section {
     text-align: center;
@@ -242,7 +249,7 @@ html, body {
     object-fit: cover;
     display: block;
 }
-.novost {
+.news-content {
     padding-left: clamp(5px, 4vw, 20px);
 }
 
@@ -254,7 +261,29 @@ html, body {
     .navbar {
         padding: 20px 20px;
     }
-
+    .burger {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        border: none;
+        background: none;
+        color: white;
+    }
+        .burger span {
+            width: 28px;
+            height: 3px;
+            background: white;
+            border-radius: 999px;
+        }
+        .burger.active span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+        .burger.active span:nth-child(2) {
+            visibility: hidden;
+        }
+        .burger.active span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
     .nav-links {
         display: flex;
         flex-direction: column;
@@ -270,58 +299,37 @@ html, body {
         transition: right .3s;
         padding: 15px;
     }
-
+        .nav-links.active {
+            right: 0;
+        }
     .menu-footer {
         display: flex;
         align-items: center;
         flex-direction: column;
         margin-top: auto;
-        padding-bottom: 20px;
+        margin-bottom: 20px;
     }
-
     .footer-logo {
         display: flex;
         align-items: center;
         gap: 12px;
     }
 
-    .nav-links.active {
-        right: 0;
+    .news {
+        width: auto;
+        margin: 0;
     }
-
-    .burger {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-        border: none;
-        background: none;
-        color: white;
-    }
-
-        .burger span {
-            width: 28px;
-            height: 3px;
-            background: white;
-            border-radius: 999px;
-        }
-
-        .burger.active span:nth-child(1) {
-            transform: translateY(9px) rotate(45deg);
-        }
-
-        .burger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .burger.active span:nth-child(3) {
-            transform: translateY(-9px) rotate(-45deg);
-        }
-
     #last-news {
         display: flex;
         justify-content: flex-start;
         overflow-x: auto;
     }
+        #last-news .card:nth-child(1) {
+            margin-left: 5vw;
+        }
+        #last-news .card:nth-child(6) {
+            margin-right: 5vw;
+        }
 
     #all-news {
         display: flex;
